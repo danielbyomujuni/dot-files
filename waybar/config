@@ -161,7 +161,7 @@
     "format": "<b>]</b>"
   },
   "bluetooth": {
-    "format" : "󰂯 {num_connections}"
+    "format" : "󰂯 {num_connections}",
     "on-click": "bluedevil"
   }
 }

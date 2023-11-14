@@ -1,3 +1,5 @@
+@import "mocha.css";
+
 * {
   padding: 0;
   margin: 0;
@@ -10,21 +12,21 @@ window#waybar {
 }
 
 .modules-left {
-  background-color: #1e2030;
+  background-color: @base;
   border-radius: 8px;
   padding-right: 15px;
   padding-left: 15px;
 }
 
 .modules-center {
-  background-color: #1e2030;
+  background-color: @base;
   border-radius: 8px;
   padding-right: 10px;
   padding-left: 10px;
 }
 
 .modules-right {
-  background-color: #1e2030;
+  background-color: @base;
   border-radius: 8px;
   padding-right: 15px;
   padding-left: 15px;
@@ -32,7 +34,7 @@ window#waybar {
 
 #custom-icon {
   font-size: 20px;
-  color: #00bfff; /* deepskyblue */
+  color: @blue; /* deepskyblue */
   padding-right: 10px;
 }
 
@@ -40,36 +42,36 @@ window#waybar {
 #memory,
 #temperature {
   font-size: 14px;
-  background: #363a4f;
+  background: @crust;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 #cpu {
-  color: #eed49f;
+  color: @yellow;
   padding: 0px 10px 0px 12px;
   border-radius: 5px 0px 0px 5px;
 }
 
 #memory {
-  color: #a6da95;
+  color: @green;
   padding: 0px 10px 0px 0px;
 }
 
 #temperature {
-  color: #8aadf4;
+  color: @sapphire;
   padding: 0px 12px 0px 0px;
   border-radius: 0px 5px 5px 0px;
 }
 
 #custom-window-name {
   margin-right: 10px;
-  color: #cad3f5;
+  color: @mauve;
 }
 
 #custom-pacman-update-icon {
-  background-color: #8bd5ca;
-  color: #181926;
+  background-color: @teal;
+  color: @crust;
   padding-left: 8px;
   padding-right: 10px;
   margin-top: 5px;
@@ -78,37 +80,37 @@ window#waybar {
 }
 
 #custom-pacman-update {
-  color: #8bd5ca;
+  color: @teal;
   margin: 5px 5px 5px 0px;
 }
 
 #workspaces button:nth-child(1) label {
-  color: #8aadf4;
+  color: @red;
   margin: 0px 8px;
 }
 
 #workspaces button:nth-child(2) label {
-  color: #ed8796;
+  color: @peach;
   margin: 0px 8px;
 }
 
 #workspaces button:nth-child(3) label {
-  color: #a6da95;
+  color: @yellow;
   margin: 0px 8px;
 }
 
 #workspaces button:nth-child(4) label {
-  color: #c6a0f6;
+  color: @green;
   margin: 0px 8px;
 }
 
 #workspaces button:nth-child(5) label {
-  color: #f4dbd6;
+  color: @lavender;
   margin: 0px 8px;
 }
 
 #workspaces button:nth-child(6) label {
-  color: #f5a97f;
+  color: @mauve;
   margin: 0px 8px;
 }
 
@@ -120,30 +122,30 @@ window#waybar {
 #pulseaudio,
 #bluetooth {
   font-size: 14px;
-  background: #363a4f;
+  background: @crust;
   margin-top: 5px;
   margin-bottom: 5px;
 }
 
 #bluetooth {
-  color: #eed49f;
+  color: @peach;
   padding: 0px 10px 0px 10px;
   border-radius: 5px 0px 0px 5px;
 
 }
 
 #pulseaudio {
-  color: #91d7e3;
+  color: @sky;
   padding: 0px 10px 0px 10px;
   border-radius: 0px 5px 5px 0px;
 }
 
 #custom-right-arr {
-  color: #8aadf4;
+  color: @blue;
 }
 
 #network {
-  color: #c6a0f6;
+  color: @sapphire;
   margin-right: 10px;
 }
 
@@ -160,8 +162,8 @@ window#waybar {
 }
 
 #custom-clock-icon {
-  background-color: #cad3f5;
-  color: #181926;
+  background-color: @lavender;
+  color: @crust;
   padding-left: 5px;
   padding-right: 10px;
   margin-top: 5px;
@@ -171,7 +173,7 @@ window#waybar {
 
 #clock {
   padding-left: 10px;
-  color: #cad3f5;
+  color: @lavender;
 }
 
 /*# sourceMappingURL=style.css.map */
