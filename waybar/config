@@ -23,6 +23,7 @@
 
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
+    "custom/wallpaper",
     "bluetooth",
     "pulseaudio",
     "custom/right-arr",
@@ -163,5 +164,9 @@
   "bluetooth": {
     "format" : "󰂯 {num_connections}",
     "on-click": "bluedevil"
+  },
+  "custom/wallpaper": {
+    "format": "󰟾",
+    "on-click": "waypaper --backend swww"
   }
 }
