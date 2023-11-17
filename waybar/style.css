@@ -87,20 +87,18 @@ window#waybar {
   margin: 5px 5px 5px 0px;
 }
 
-#workspaces button:nth-child(1) label {
+
+#custom-workspacesPrimary {
   color: @red;
   margin: 0px 8px;
 }
 
-#workspaces button:nth-child(2) label {
+#custom-workspacesSecondary {
   color: @peach;
   margin: 0px 8px;
 }
 
-#workspaces button:nth-child(3) label {
-  color: @yellow;
-  margin: 0px 8px;
-}
+/*yellow*/
 
 #workspaces button:nth-child(4) label {
   color: @green;

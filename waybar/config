@@ -1,7 +1,7 @@
 {
   "include": "~/.config/waybar/configs/custom_modules/modules",
   "layer": "top",
-  "height": 35,
+  "height": 36,
   "margin-top": 10,
   "margin-left": 10,
   "margin-bottom": 0,
@@ -17,11 +17,10 @@
     "custom/separator",
     "custom/window-name",
     "custom/pacman-update-icon",
-    "custom/pacman-update",
-    "tray"
+    "custom/pacman-update"
   ],
 
-  "modules-center": ["hyprland/workspaces"],
+  "modules-center": ["custom/workspacesPrimary", "custom/workspacesSecondary"],
   "modules-right": [
     "custom/wallpaper",
     "bluetooth",
@@ -33,7 +32,6 @@
   ],
 
   "hyprland/workspaces": {
-    "all-outputs": true,
     "format": "{icon}",
     "format-icons": {
       "1": "",
@@ -163,10 +161,22 @@
   },
   "bluetooth": {
     "format" : "󰂯 {num_connections}",
-    "on-click": "bluedevil"
+    "on-click": "blueman-manager"
   },
   "custom/wallpaper": {
     "format": "󰟾",
     "on-click": "waypaper --backend swww"
+  },
+  "custom/workspacesPrimary": {
+    "format": "{}",
+    "interval": 1,
+    "on-click": "hyprctl dispatch workspace name:Secondary; hyprctl dispatch workspace name:Primary",
+    "exec": "if [ $(~/.config/scripts/currentWorkspace.sh) = 0 ]; then echo ; else echo ; fi;"
+  },  
+  "custom/workspacesSecondary": {
+    "format": "{}",
+    "interval": 1,
+    "on-click": "hyprctl dispatch workspace name:AnimeSecondary; hyprctl dispatch workspace name:AnimePrimary",
+    "exec": "if [ $(~/.config/scripts/currentWorkspace.sh) = 1 ]; then echo ; else echo ; fi;"
   }
 }
