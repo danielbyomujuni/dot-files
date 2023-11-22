@@ -1,0 +1,150 @@
+
+
+;;Left Bar 
+
+
+
+(defpoll currentWindow :interval "100ms"
+  `scripts/currentwindow.sh`)
+
+(defwidget leftbar []
+    (box :orientation "h"
+    :halign "start"
+    :class "mod-left"
+    :space-evenly false
+    
+    (button :class "launcher_icon" 
+		   	:onclick "scripts/launcher.sh"  "")
+    (statusbar)
+    (label :text " ${currentWindow}" :class "current-window")
+    (pacmanStatus)
+    )
+)
+
+(defwidget statusbar []
+    (box :orientation "h"
+    :halign "start"
+    :class "statusbar"
+
+    (label :text "  ${EWW_CPU.cores[0].usage}% " :class "status-cpu")
+    (label :text "  ${EWW_RAM.used_mem_perc - (EWW_RAM.used_mem_perc % 1)}% ":class "status-mem")
+    (label :text "  ${EWW_TEMPS.CORETEMP_CORE_0}°C" :class "status-temp")
+    )
+)
+
+(defpoll packages :interval "5s"
+  `scripts/pacmanUpdates.sh`)
+
+
+(defwidget pacmanStatus []
+    (box :orientation "h"
+    :halign "start"
+    :class "pacman"
+
+    (label :text "󰚰" :class "pacman-icon")
+    (label :text packages :class "pacman-updates")
+    )
+)
+
+;;Center Bar
+
+(defwidget centerbar []
+    (box :orientation "h"
+    :halign "center"
+    :class "mod-center"
+    :space-evenly false
+    
+    (label :text "Center")
+    )
+)
+
+;;Right Bar
+
+(defwidget rightbar []
+    (box :orientation "h"
+    :halign "end"
+    :class "mod-right"
+    :space-evenly false
+
+    (optionsbar)
+    (label :text "" :class "arrow")
+    (clock)
+    
+    )
+)
+
+
+(defpoll time :interval "5s"
+  `date +'{"hour":"%H","min":"%M"}'`)
+
+(defwidget clock []
+    (box :orientation "h"
+    :halign "start"
+    :class "pacman"
+    :space-evenly false
+
+    (label :text "" :class "clock-icon")
+    (label :text "${(time.hour + 7) % 12 }:${time.min}" :class "clock-time")
+    )
+)
+
+(defpoll bluetoothCon :interval "5s"
+  `scripts/numBluetooth.sh`)
+(defpoll volume :interval "5s"
+  `scripts/getVolume.sh`)
+
+(defwidget optionsbar []
+    (box :orientation "h"
+    :halign "start"
+    :class "statusbar"
+    :space-evenly false
+
+        (button :class "wallpaper-button" 
+		   	:onclick "scripts/wallpaper.sh"  "󰟾")
+
+        (button :class "bluetooth-button" 
+		   	:onclick "scripts/open/bluetooth.sh"  "󰂯 ${bluetoothCon}")
+
+        (button :class "audio-button" 
+		   	:onclick "scripts/audio.sh"  "  ${volume}")
+    )
+)
+
+
+(defwindow topbarSecondary 
+    :monitor 1
+    :geometry (geometry :x "10px"
+              :y "10px"
+              :height "36px"
+              :width "99%"
+              :anchor "top center")
+    ;;:reserve (struts :side "top" :distance "30px")
+    :exclusive "true"
+    ;;:windowtype "dock"
+    ;;:stacking "bt"
+
+    (box :orientation "h" :class "main"    
+        (leftbar)
+        ;;(centerbar)
+        (rightbar)
+    )
+)
+
+(defwindow topbarPrimary
+    :monitor 0
+    :geometry (geometry :x "10px"
+              :y "10px"
+              :height "36px"
+              :width "99%"
+              :anchor "top center")
+    ;;:reserve (struts :side "top" :distance "30px")
+    :exclusive "true"
+    ;;:windowtype "dock"
+    ;;:stacking "bt"
+
+    (box :orientation "h" :class "main"    
+        (leftbar)
+        ;;(centerbar)
+        (rightbar)
+    )
+)

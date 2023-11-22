@@ -1,0 +1,167 @@
+@use "sass:list";
+// This file followed by catppuccin color scheme
+
+// Color definition
+$Rosewater: #f4dbd6;
+$Flamingo: #f0c6c6;
+$Pink: #f5bde6;
+$Mauve: #c6a0f6;
+$Red: #ed8796;
+$Maroon: #ee99a0;
+$Peach: #f5a97f;
+$Yellow: #eed49f;
+$Green: #a6da95;
+$Teal: #8bd5ca;
+$Sky: #91d7e3;
+$Sapphire: #7dc4e4;
+$Blue: #8aadf4;
+$Lavender: #b7bdf8;
+$Text: #cad3f5;
+$Subtext1: #b8c0e0;
+$Subtext0: #a5adcb;
+$Overlay2: #939ab7;
+$Overlay1: #8087a2;
+$Overlay0: #6e738d;
+$Surface2: #5b6078;
+$Surface1: #494d64;
+$Surface0: #363a4f;
+$Base: #24273a;
+$Mantle: #1e2030;
+$Crust: #181926;
+
+* {
+    all: unset;
+    padding: 0;
+    margin: 0;
+    font-family: JetBrainsMono Nerd Font;
+    font-size: 16px;
+  }
+
+.main, .topbarSecondary, .topbarPrimary {
+    all: unset;
+    background-color: rgba(0,0,0,0);
+    
+}
+.mod-right,
+.mod-left {
+    background-color: $Mantle;
+    border-radius: 8px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border: 2px solid $Surface1;
+}
+
+.launcher_icon {
+    padding-bottom: 0px;
+    color: $Blue; /* deepskyblue */
+    padding-right: 15px;
+    padding-left: 10px;
+    border-radius: 50px;
+}
+
+.launcher_icon:hover {
+    opacity: .8;
+    background-color: $Crust;
+}
+
+.statusbar {
+    font-size: 14px;
+    background: $Crust;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.status-cpu {
+    color: $Yellow;
+}
+
+.status-mem {
+    color: $Green;
+    padding-left: 10px;
+}
+
+
+.status-temp {
+    color: $Blue;
+    padding-left: 10px;
+}
+
+.current-window {
+    margin-right: 10px; 
+    margin-left: 10px;
+    color: $Mauve;
+    font-weight: bolder;
+}
+
+.pacman {
+
+}
+
+.pacman-icon {
+    background-color: $Teal;
+    color: $Crust;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.pacman-updates {
+    color: $Teal;
+    margin: 5px 5px 5px 0px;
+}
+
+.clock {
+
+}
+
+.clock-icon {
+    background-color: $Lavender;
+    color: $Crust;
+    padding-left: 5px;
+    padding-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.clock-time {
+    color: $Lavender;
+    margin: 5px 5px 5px 0px;
+    font-weight: bold;
+}
+
+.arrow {
+    color: $Blue;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+
+.wallpaper-button,
+.audio-button,
+.bluetooth-button {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.wallpaper-button:hover,
+.audio-button:hover,
+.bluetooth-button:hover {
+    opacity: .75;
+}
+
+.wallpaper-button {
+    color: $Maroon;
+}
+.audio-button {
+    color: $Sky;
+}
+.bluetooth-button {
+    color: $Peach;
+}
