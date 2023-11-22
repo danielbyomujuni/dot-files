@@ -26,9 +26,9 @@
     :halign "start"
     :class "statusbar"
 
-    (label :text "  ${EWW_CPU.cores[0].usage}% " :class "status-cpu")
-    (label :text "  ${EWW_RAM.used_mem_perc - (EWW_RAM.used_mem_perc % 1)}% ":class "status-mem")
-    (label :text "  ${EWW_TEMPS.CORETEMP_CORE_0}°C" :class "status-temp")
+    (label :text "  ${round((EWW_CPU.cores[0].usage + EWW_CPU.cores[1].usage + EWW_CPU.cores[2].usage + EWW_CPU.cores[3].usage)/4,0)  }% " :class "status-cpu")
+    (label :text "  ${round(EWW_RAM.used_mem / 1000000000,2)}GB ":class "status-mem")
+    (label :text "  ${round((EWW_TEMPS.CORETEMP_CORE_0 + EWW_TEMPS.CORETEMP_CORE_1 + EWW_TEMPS.CORETEMP_CORE_2 + EWW_TEMPS.CORETEMP_CORE_3)/4,0)}°C" :class "status-temp")
     )
 )
 

@@ -70,8 +70,8 @@ $Crust: #181926;
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 .status-cpu {
@@ -80,13 +80,13 @@ $Crust: #181926;
 
 .status-mem {
     color: $Green;
-    padding-left: 10px;
+    padding-left: 3px;
 }
 
 
 .status-temp {
     color: $Blue;
-    padding-left: 10px;
+    padding-left: 3px;
 }
 
 .current-window {
@@ -94,10 +94,6 @@ $Crust: #181926;
     margin-left: 10px;
     color: $Mauve;
     font-weight: bolder;
-}
-
-.pacman {
-
 }
 
 .pacman-icon {
