@@ -3,7 +3,9 @@
 !/waybar
 !/README.md
 !/scripts
-!/nwg-drawer
-!/nwg-dock-hyprland
 !/eww
 !/neofetch
+!/rofi
+!/gtk-4.0
+!/gtk-3.0
+!/alacritty

@@ -53,15 +53,15 @@ $Crust: #181926;
 
 .launcher_icon {
     padding-bottom: 0px;
+    font-size: 20px;
     color: $Blue; /* deepskyblue */
-    padding-right: 15px;
+    padding-right: 10px;
     padding-left: 10px;
     border-radius: 50px;
 }
 
 .launcher_icon:hover {
     opacity: .8;
-    background-color: $Crust;
 }
 
 .statusbar {
@@ -80,13 +80,13 @@ $Crust: #181926;
 
 .status-mem {
     color: $Green;
-    padding-left: 3px;
+    //padding-left: 3px;
 }
 
 
 .status-temp {
     color: $Blue;
-    padding-left: 3px;
+    //padding-left: 1px;
 }
 
 .current-window {
@@ -97,33 +97,35 @@ $Crust: #181926;
 }
 
 .pacman-icon {
+    font-size: 20px;
     background-color: $Teal;
     color: $Crust;
-    padding-left: 10px;
-    padding-right: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
+    padding-right: 3px;
 }
 
+
 .pacman-updates {
+    font-size: 20px;
     color: $Teal;
     margin: 5px 5px 5px 0px;
 }
 
 .clock {
-
+    padding-right: 5px;
 }
 
 .clock-icon {
     background-color: $Lavender;
     color: $Crust;
-    padding-left: 5px;
-    padding-right: 10px;
     margin-top: 5px;
     margin-bottom: 5px;
     margin-right: 5px;
     border-radius: 5px;
+    //padding-right: 5px;
+    font-size: 18px;
 }
 
 .clock-time {
@@ -160,4 +162,19 @@ $Crust: #181926;
 }
 .bluetooth-button {
     color: $Peach;
+}
+
+.power-icon {
+    font-size: 25px;
+    background-color: $Maroon;
+    color: $Crust;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    //padding-right: 1px;
+    margin-left: 5px;
+}
+
+.power-icon:hover {
+    background-color: $Red;
 }

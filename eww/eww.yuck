@@ -14,9 +14,15 @@
     :space-evenly false
     
     (button :class "launcher_icon" 
-		   	:onclick "scripts/launcher.sh"  "")
+		   	:onclick "~/.config/rofi/launchers/type-7/launcher.sh"  
+            (label 
+                :width 26
+                :halign "center"
+                :text " " ))
     (statusbar)
-    (label :text " ${currentWindow}" :class "current-window")
+    (label 
+        :text " ${currentWindow}" 
+        :class "current-window")
     (pacmanStatus)
     )
 )
@@ -26,9 +32,9 @@
     :halign "start"
     :class "statusbar"
 
-    (label :text "  ${round((EWW_CPU.cores[0].usage + EWW_CPU.cores[1].usage + EWW_CPU.cores[2].usage + EWW_CPU.cores[3].usage)/4,0)  }% " :class "status-cpu")
-    (label :text "  ${round(EWW_RAM.used_mem / 1000000000,2)}GB ":class "status-mem")
-    (label :text "  ${round((EWW_TEMPS.CORETEMP_CORE_0 + EWW_TEMPS.CORETEMP_CORE_1 + EWW_TEMPS.CORETEMP_CORE_2 + EWW_TEMPS.CORETEMP_CORE_3)/4,0)}°C" :class "status-temp")
+    (label :text " ${round((EWW_CPU.cores[0].usage + EWW_CPU.cores[1].usage + EWW_CPU.cores[2].usage + EWW_CPU.cores[3].usage)/4,0) }%" :class "status-cpu")
+    (label :text " ${round(EWW_RAM.used_mem / 1000000000,2)}GB":class "status-mem")
+    (label :text " ${round((EWW_TEMPS.CORETEMP_CORE_0 + EWW_TEMPS.CORETEMP_CORE_1 + EWW_TEMPS.CORETEMP_CORE_2 + EWW_TEMPS.CORETEMP_CORE_3)/4,0)}°C" :class "status-temp")
     )
 )
 
@@ -41,7 +47,7 @@
     :halign "start"
     :class "pacman"
 
-    (label :text "󰚰" :class "pacman-icon")
+    (label :text "󰚰" :class "pacman-icon" :width 36 :halign "center")
     (label :text packages :class "pacman-updates")
     )
 )
@@ -69,7 +75,8 @@
     (optionsbar)
     (label :text "" :class "arrow")
     (clock)
-    
+
+    (button :class "power-icon" :width 36 :halign "center" "⏻")
     )
 )
 
@@ -82,9 +89,9 @@
     :halign "start"
     :class "pacman"
     :space-evenly false
-
-    (label :text "" :class "clock-icon")
-    (label :text "${(time.hour + 7) % 12 }:${time.min}" :class "clock-time")
+    :class "clock"
+    (label :text "" :class "clock-icon" :width 36 :halign "center")
+    (label :text "${(time.hour + 8) % 12 }:${time.min}" :class "clock-time")
     )
 )
 
@@ -106,7 +113,7 @@
 		   	:onclick "scripts/open/bluetooth.sh"  "󰂯 ${bluetoothCon}")
 
         (button :class "audio-button" 
-		   	:onclick "scripts/audio.sh"  "  ${volume}")
+		   	:onclick "scripts/audio.sh"  " ${volume}")
     )
 )
 

@@ -6,8 +6,13 @@ Packages Installed
 
 [Chaotic AUR](https://aur.chaotic.cx/) 
 Hyprland-Nvidia
-Waybar
+EWW
+SWWW
+Wayaper
+
 Jetbrains Nerd Font
 Waterfox
-Kitty
+Allacrity
 jq
+catppuccin-gtk-theme-mocha
+libadwaita-without-adwaita-git
