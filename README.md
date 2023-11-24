@@ -12,7 +12,7 @@ Wayaper
 
 Jetbrains Nerd Font
 Waterfox
-Allacrity
+Alacritty
 jq
 catppuccin-gtk-theme-mocha
 libadwaita-without-adwaita-git
