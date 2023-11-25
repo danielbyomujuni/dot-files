@@ -97,7 +97,7 @@
 
 (defpoll bluetoothCon :interval "5s"
   `scripts/numBluetooth.sh`)
-(defpoll volume :interval "5s"
+(defpoll volume :interval "100ms"
   `scripts/getVolume.sh`)
 
 (defwidget optionsbar []
