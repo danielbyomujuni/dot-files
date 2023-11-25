@@ -117,8 +117,7 @@
     )
 )
 
-
-(defwindow topbarSecondary 
+(defwindow topbarSecondary
     :monitor 1
     :geometry (geometry :x "10px"
               :y "10px"
