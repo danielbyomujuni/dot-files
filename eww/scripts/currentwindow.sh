@@ -11,7 +11,12 @@ fi;
 if [[ $window =~ ^OBS.* ]]; then
   echo "OBS Studio";
   exit
-fi;  
+fi;
+
+if [[ $window =~ ^.*Discord ]]; then
+  echo "Discord";
+  exit
+fi;
 
 echo $window;
 exit
