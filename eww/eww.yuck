@@ -1,10 +1,13 @@
+(defvar eww "/bin/eww -c $HOME/.config/eww/")
 
 ;;Left Bar 
 
-(defvar eww "/bin/eww -c $HOME/.config/eww/")
-
 (defpoll currentWindow :interval "100ms"
   `scripts/currentwindow.sh`)
+
+
+(include "modules/status_bar.yuck")
+(include "modules/pacman_status.yuck")
 
 (defwidget leftbar []
     (box :orientation "h"
@@ -18,36 +21,11 @@
                 :width 26
                 :halign "center"
                 :text " " ))
-    (statusbar)
+    (status_bar)
     (label 
         :text " ${currentWindow}" 
         :class "current-window")
-    (pacmanStatus)
-    )
-)
-
-(defwidget statusbar []
-    (box :orientation "h"
-    :halign "start"
-    :class "statusbar"
-
-    (label :text " ${round((EWW_CPU.cores[0].usage + EWW_CPU.cores[1].usage + EWW_CPU.cores[2].usage + EWW_CPU.cores[3].usage)/4,0) }%" :class "status-cpu")
-    (label :text " ${round(EWW_RAM.used_mem / 1000000000,2)}GB":class "status-mem")
-    (label :text " ${round((EWW_TEMPS.CORETEMP_CORE_0 + EWW_TEMPS.CORETEMP_CORE_1 + EWW_TEMPS.CORETEMP_CORE_2 + EWW_TEMPS.CORETEMP_CORE_3)/4,0)}°C" :class "status-temp")
-    )
-)
-
-(defpoll packages :interval "5s"
-  `scripts/pacmanUpdates.sh`)
-
-
-(defwidget pacmanStatus []
-    (box :orientation "h"
-    :halign "start"
-    :class "pacman"
-
-    (label :text "󰚰" :class "pacman-icon" :width 36 :halign "center")
-    (label :text packages :class "pacman-updates")
+    (pacman_status)
     )
 )
 
@@ -65,6 +43,8 @@
 
 ;;Right Bar
 
+(include "modules/power_menu.yuck")
+
 (defwidget rightbar []
     (box :orientation "h"
     :halign "end"
@@ -74,53 +54,9 @@
     (optionsbar)
     (label :text "" :class "arrow")
     (clock)
-    (power)
+    (power_menu)
     )
 )
-
-
-  (defwidget power [] 
-      (eventbox	
-          :onhover "${eww} update POWER_MENU=true"	
-          :onhoverlost "${eww} update POWER_MENU=false" 
-          
-          (box :orientation "h"
-              :vexpand "false" 	
-              :space-evenly false
-      
-              (revealer	
-                :transition "slideleft"				
-  				:reveal {POWER_MENU == true ? true : false}			 
-   				:duration "550ms"
-      
-                  (box :orientation "h"
-                      :halign "start"
-                      :class "statusbar powerbar"
-                      :width 125
-                      :space-evenly true
-  
-                      (button :class "powerbar-shutdown"
-                      :onclick "scripts/power/shutdown.sh"
-                       "󰐥")
-                      (button :class "powerbar-restart" 
-                      :onclick "scripts/power/reboot.sh"
-                      "")
-                      ;;(button :class "powerbar-sleep"
-                      ;;:onclick "scripts/power/sleep.sh"
-                      ;; "⏾")
-                      (button 
-                        :class "powerbar-logout" 
-                        :onclick "scripts/power/logout.sh"
-                        "󰍃")
-                  )
-              )
-              (button :class "power-icon" :halign "center" :width 36
-                  (label :text "⏻" :xalign 0.45)
-              )
-          )
-    )
-)
-(defvar POWER_MENU false)
 
 
 

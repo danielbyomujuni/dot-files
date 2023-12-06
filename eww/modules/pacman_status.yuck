@@ -1,0 +1,12 @@
+(defpoll packages :interval "5s"
+  `scripts/pacmanUpdates.sh`)
+
+(defwidget pacman_status []
+    (box :orientation "h"
+    :halign "start"
+    :class "pacman"
+
+    (label :text "󰚰" :class "pacman-icon" :width 36 :halign "center")
+    (label :text packages :class "pacman-updates")
+    )
+)

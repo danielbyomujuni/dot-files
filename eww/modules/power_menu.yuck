@@ -1,0 +1,42 @@
+(defwidget power_menu [] 
+    (eventbox	
+        :onhover "${eww} update POWER_MENU=true"	
+        :onhoverlost "${eww} update POWER_MENU=false" 
+        
+        (box :orientation "h"
+            :vexpand "false" 	
+            :space-evenly false
+    
+            (revealer	
+              :transition "slideleft"				
+                :reveal {POWER_MENU == true ? true : false}			 
+                 :duration "550ms"
+    
+                (box :orientation "h"
+                    :halign "start"
+                    :class "statusbar powerbar"
+                    :width 125
+                    :space-evenly true
+
+                    (button :class "powerbar-shutdown"
+                    :onclick "scripts/power/shutdown.sh"
+                     "󰐥")
+                    (button :class "powerbar-restart" 
+                    :onclick "scripts/power/reboot.sh"
+                    "")
+                    ;;(button :class "powerbar-sleep"
+                    ;;:onclick "scripts/power/sleep.sh"
+                    ;; "⏾")
+                    (button 
+                      :class "powerbar-logout" 
+                      :onclick "scripts/power/logout.sh"
+                      "󰍃")
+                )
+            )
+            (button :class "power-icon" :halign "center" :width 36
+                (label :text "⏻" :xalign 0.45)
+            )
+        )
+  )
+)
+(defvar POWER_MENU false)
