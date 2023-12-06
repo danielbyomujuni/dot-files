@@ -122,10 +122,12 @@ $Crust: #181926;
     color: $Crust;
     margin-top: 5px;
     margin-bottom: 5px;
+    //margin-right: auto;
     margin-right: 5px;
     border-radius: 5px;
     //padding-right: 5px;
     font-size: 18px;
+    //text-align: center;
 }
 
 .clock-time {
@@ -165,16 +167,50 @@ $Crust: #181926;
 }
 
 .power-icon {
-    font-size: 25px;
+    font-size: 18px;
     background-color: $Maroon;
     color: $Crust;
     margin-top: 5px;
     margin-bottom: 5px;
     border-radius: 5px;
     //padding-right: 1px;
-    margin-left: 5px;
 }
 
 .power-icon:hover {
     background-color: $Red;
+}
+
+.powerbar {
+    margin-right: 10px;
+}
+
+.powerbar-shutdown,
+.powerbar-restart,
+.powerbar-sleep,
+.powerbar-logout {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+.powerbar-shutdown:hover,
+.powerbar-restart:hover,
+.powerbar-sleep:hover,
+.powerbar-logout:hover {
+    opacity: 0.6;
+}
+
+.powerbar-shutdown {
+    color: $Red;
+}
+
+.powerbar-restart {
+    color: $Sky;
+}
+
+.powerbar-sleep {
+    color: $Lavender;
+}
+
+.powerbar-logout {
+    color: $Rosewater;
 }

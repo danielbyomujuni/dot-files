@@ -3,12 +3,22 @@
       xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
       xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
 >
-  <bookmark href="ftp://192.168.1.76/" added="2023-11-28T18:27:59.179491Z" modified="2023-11-29T22:38:23.135299Z" visited="2023-11-29T22:38:23.135297Z">
+  <bookmark href="ftp://192.168.1.76/" added="2023-11-28T18:27:59.179491Z" modified="2023-12-04T00:01:08.370358Z" visited="2023-12-04T00:01:08.370355Z">
     <title>/ on 192.168.1.76</title>
     <info>
       <metadata owner="http://freedesktop.org">
         <bookmark:applications>
-          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-11-29T22:38:23.135298Z" count="2"/>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-12-04T00:01:08.370357Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="ftp://daniel@192.168.1.76/" added="2023-12-04T00:17:43.582293Z" modified="2023-12-06T18:03:28.443465Z" visited="2023-12-06T18:03:28.443462Z">
+    <title>/ on 192.168.1.76</title>
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <bookmark:applications>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-12-06T18:03:28.443464Z" count="2"/>
         </bookmark:applications>
       </metadata>
     </info>
