@@ -1,7 +1,8 @@
+(defvar eww "/bin/eww -c $HOME/.config/eww/")
 (defwidget power_menu [] 
     (eventbox	
-        :onhover "${eww} update POWER_MENU=true"	
-        :onhoverlost "${eww} update POWER_MENU=false" 
+        :onhover "${eww} update POWER_MENU_VISABLE=true"	
+        :onhoverlost "${eww} update POWER_MENU_VISABLE=false" 
         
         (box :orientation "h"
             :vexpand "false" 	
@@ -9,7 +10,7 @@
     
             (revealer	
               :transition "slideleft"				
-                :reveal {POWER_MENU == true ? true : false}			 
+                :reveal {POWER_MENU_VISABLE == true ? true : false}			 
                  :duration "550ms"
     
                 (box :orientation "h"
@@ -39,4 +40,4 @@
         )
   )
 )
-(defvar POWER_MENU false)
+(defvar POWER_MENU_VISABLE false)

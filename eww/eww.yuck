@@ -1,4 +1,4 @@
-(defvar eww "/bin/eww -c $HOME/.config/eww/")
+
 
 ;;Left Bar 
 
