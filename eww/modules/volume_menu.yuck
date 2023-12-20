@@ -1,0 +1,49 @@
+
+(defwidget VolumeMenu []
+  ;;(eventbox
+    ;;    :onhover "${eww} update VOLUME_MENU_VISABLE=true"
+    ;;    :onhoverlost "${eww} update VOLUME_MENU_VISABLE=false"
+    ;;
+    ;;    (box :orientation "h"
+      ;;        :vexpand "false"
+      ;;        :space-evenly false
+      ;;        (revealer
+        ;;            :transition "slideleft"
+        ;;              :reveal true ;;{VOLUME_MENU_VISABLE == true ? true : false}
+        ;;               :duration "550ms"
+        ;;               (box :orientation "h"
+          ;;               :vexpand "false"
+          ;;               :space-evenly false
+          
+          ;;                (label :text "Whoop")
+          
+          ;;               (scale
+            ;;                    :width 50
+            ;;                    :min 0.0
+            ;;                    :max 100.0
+            ;;                    :value 50.0
+            ;;                   :orientation "h"
+            ;;                    :onchange "${eww} update VOLUME_VALUE={}"
+            ;;(progress
+              ;;                       :width 50
+              ;;                        :value 50.0
+              ;;                       :orientation "h"
+            ;;                   )
+          ;;                )
+          ;;
+        ;;            )
+        
+      ;;           )
+      (box :orientation "h"
+
+        (button :class "audio-button"
+          :onclick "scripts/audio.sh"  " ${volume}"
+        )
+      )
+    ;;)
+    
+  )
+  
+  ;;(defvar VOLUME_MENU_VISABLE false)
+  
+  ;;(defvar VOLUME_VALUE 50)

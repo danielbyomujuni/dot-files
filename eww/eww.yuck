@@ -8,6 +8,7 @@
 
 (include "modules/status_bar.yuck")
 (include "modules/pacman_status.yuck")
+(include "modules/volume_menu.yuck")
 
 (defwidget leftbar []
     (box :orientation "h"
@@ -94,8 +95,7 @@
         (button :class "bluetooth-button" 
 		   	:onclick "scripts/open/bluetooth.sh"  "󰂯 ${bluetoothCon}")
 
-        (button :class "audio-button" 
-		   	:onclick "scripts/audio.sh"  " ${volume}")
+        (VolumeMenu)
     )
 )
 

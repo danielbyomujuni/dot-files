@@ -13,12 +13,12 @@
       </metadata>
     </info>
   </bookmark>
-  <bookmark href="ftp://daniel@192.168.1.76/" added="2023-12-04T00:17:43.582293Z" modified="2023-12-13T15:18:04.861467Z" visited="2023-12-13T15:18:04.861463Z">
+  <bookmark href="ftp://daniel@192.168.1.76/" added="2023-12-04T00:17:43.582293Z" modified="2023-12-20T19:12:47.758403Z" visited="2023-12-20T19:12:47.758401Z">
     <title>/ on 192.168.1.76</title>
     <info>
       <metadata owner="http://freedesktop.org">
         <bookmark:applications>
-          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-12-13T15:18:04.861465Z" count="4"/>
+          <bookmark:application name="org.gnome.Nautilus" exec="&apos;org.gnome.Nautilus %u&apos;" modified="2023-12-20T19:12:47.758402Z" count="6"/>
         </bookmark:applications>
       </metadata>
     </info>

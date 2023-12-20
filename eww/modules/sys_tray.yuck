@@ -1,0 +1,6 @@
+
+(defwidget SystemTray []
+        (box :orientation "h"
+
+        )
+    )
