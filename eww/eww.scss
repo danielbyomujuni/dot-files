@@ -43,7 +43,8 @@ $Crust: #181926;
     
 }
 .mod-right,
-.mod-left {
+.mod-left,
+.mod-center {
     background-color: $Mantle;
     border-radius: 8px;
     padding-right: 5px;
@@ -60,9 +61,6 @@ $Crust: #181926;
     border-radius: 50px;
 }
 
-.launcher_icon:hover {
-    opacity: .8;
-}
 
 .statusbar {
     font-size: 14px;
@@ -105,6 +103,36 @@ $Crust: #181926;
     border-radius: 5px;
     padding-right: 3px;
 }
+
+.current-workspace {
+    font-size: 20px;
+    background-color: $Lavender;
+    color: $Crust;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    padding-right: 10px;
+    padding-left: 7px;
+}
+
+
+.git_sync_icon {
+    padding-bottom: 0px;
+    font-size: 20px;
+    color: $Blue; /* deepskyblue */
+    padding-right: 10px;
+    padding-left: 10px;
+    border-radius: 50px;
+}
+
+.mod-center { padding-left: 50px}
+
+.git_sync_icon:hover {
+  opacity:.75;
+}
+
+
+
 
 
 .pacman-updates {

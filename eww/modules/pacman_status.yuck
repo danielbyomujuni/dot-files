@@ -1,4 +1,4 @@
-(defpoll packages :interval "5s"
+(defpoll packages :interval "1h"
   `scripts/pacmanUpdates.sh`)
 
 (defwidget pacman_status []

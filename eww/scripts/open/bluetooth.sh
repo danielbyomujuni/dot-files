@@ -1,2 +1,2 @@
 #!/bin/bash 
-blueman-manager
+overskride

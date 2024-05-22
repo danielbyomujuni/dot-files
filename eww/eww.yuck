@@ -32,14 +32,29 @@
 
 ;;Center Bar
 
+(defpoll currentworkspace :interval "50ms"
+  `scripts/workspace.sh`)
+
 (defwidget centerbar []
     (box :orientation "h"
     :halign "center"
     :class "mod-center"
     :space-evenly false
     
-    (label :text "Center")
-    )
+    (label :text "${currentworkspace}"
+           :class "current-workspace")
+  
+
+    (button :class "git_sync_icon" 
+		   	:onclick "scripts/git-sync.sh"  
+            (label 
+                :width 26
+                :halign "center"
+                :text "" ))
+
+
+  )
+
 )
 
 ;;Right Bar
@@ -113,7 +128,7 @@
 
     (box :orientation "h" :class "main"    
         (leftbar)
-        ;;(centerbar)
+        (centerbar)
         (rightbar)
     )
 )
@@ -132,7 +147,7 @@
 
     (box :orientation "h" :class "main"    
         (leftbar)
-        ;;(centerbar)
+        (centerbar)
         (rightbar)
     )
 )
