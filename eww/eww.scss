@@ -113,10 +113,12 @@ $Crust: #181926;
     border-radius: 5px;
     padding-right: 10px;
     padding-left: 7px;
+    margin-left:9px;
 }
 
 
-.git_sync_icon {
+.git_sync_icon,
+.anime_sync_icon {
     padding-bottom: 0px;
     font-size: 20px;
     color: $Blue; /* deepskyblue */
@@ -125,9 +127,8 @@ $Crust: #181926;
     border-radius: 50px;
 }
 
-.mod-center { padding-left: 50px}
-
-.git_sync_icon:hover {
+.git_sync_icon:hover
+.anime_sync_icon:hover{
   opacity:.75;
 }
 

@@ -40,7 +40,14 @@
     :halign "center"
     :class "mod-center"
     :space-evenly false
-    
+   
+    (button :class "anime_sync_icon" 
+		   	:onclick "scripts/anime-sync.sh"  
+            (label 
+                :width 26
+                :halign "center"
+                :text "" ))
+
     (label :text "${currentworkspace}"
            :class "current-workspace")
   
